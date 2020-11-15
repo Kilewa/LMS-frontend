@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
