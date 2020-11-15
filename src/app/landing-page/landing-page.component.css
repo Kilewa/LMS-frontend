@@ -1,0 +1,10 @@
+.landingpage {
+  background-image: url("/assets/images/landingpage.jpg");
+  /* "assets/images/cavaliers.png"  */
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
