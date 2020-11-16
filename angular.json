@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lmsapp"
+    }
+  },
+  "defaultProject": "lmsapp",
+  "cli": {
+    "analytics": "4ce073be-c5c5-4ae5-bd4d-34392433e362"
+  }
 }
