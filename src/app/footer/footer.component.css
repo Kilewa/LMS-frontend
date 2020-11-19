@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 .copyright{
   color: white;
+  font-family: 'Concert One', cursive;
 }
 
 .navbar-custom {
