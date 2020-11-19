@@ -19,6 +19,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactComponent } from './contact/contact.component';
+// import { LoginComponent } from './login/login.component';
+import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
+import { DeptheadComponent } from './depthead/depthead.component';
 import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 
@@ -26,7 +29,6 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
     EmployeeinfoComponent,
     UpduserdetailsComponent,
@@ -39,6 +41,9 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
     FooterComponent,
     LandingPageComponent,
     ContactComponent,
+    // LoginComponent,
+    EmployeetasksComponent,
+    DeptheadComponent,
     DepthedloginComponent,
     EmployeeloginComponent
 

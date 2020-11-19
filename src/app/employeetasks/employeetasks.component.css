@@ -1,0 +1,134 @@
+body {
+    /* margin: 0; */
+    background-color: #023E7D;
+}
+
+.table {
+    width: 90%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Ubuntu';
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    background-color: #023E7D;
+    /* margin-left: ; */
+}
+
+th,
+td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+#th {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #023E7D;
+    letter-spacing: 1px;
+}
+
+td {
+    width: 14.285%;
+    transition: all 0.3s;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1.5% 1.5% 5%;
+    vertical-align: initial;
+    padding: 1.5% 0;
+    height: 75px;
+}
+
+.day:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.today {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .25) !important;
+}
+
+span.number {
+    margin-left: 10%;
+    color: #FFF;
+}
+
+span.event {
+    height: 4px;
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+    margin: 5px 10%;
+    border-radius: 2px;
+    background-color: #91c33b;
+}
+
+span.event-multiday {
+    margin: 5px -2px;
+    border-radius: 0;
+}
+
+span.event-multiday-start {
+    margin-right: -4px;
+}
+
+span.event-multiday-finish {
+    margin-left: -4px;
+}
+
+span.event-ghost {
+    background-color: transparent;
+}
+
+#total-orders {
+    background-color: #979dacff;
+}
+
+
+/* #leave {
+    margin-left: 200px;
+} */
+
+#card,
+th,
+tr {
+    background-color: #023E7D;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    /* font-weight: 500; */
+    margin-top: 25px;
+}
+
+#td {
+    color: #FFF;
+    font-size: 23px;
+    /* font-weight: 100; */
+}
+
+#task {
+    background-color: #7D8597;
+}
+
+#tasks {
+    background-color: #7D8597;
+}
+
+.modal-content {
+    background-color: #7D8597;
+}
+
+button {
+    float: right;
+    margin-left: 900px;
+}
