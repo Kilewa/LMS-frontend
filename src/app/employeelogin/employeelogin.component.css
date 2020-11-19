@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 .auth{
     background-color: #002855;
     color: #fff;
     height: 76vh;
+    font-family: 'Concert One', cursive;
 }
 
 .form-signin{
@@ -13,6 +16,14 @@
 
 form input{
     border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
 }
 
 input[type="checkbox"]{

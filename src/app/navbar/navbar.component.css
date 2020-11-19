@@ -1,10 +1,9 @@
-/* .navbar-custom{
-  background-color: midnight-blue #0f084bff;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 .navbar-custom {
   background-color: #001233;
   height: 13vh;
+  font-family: 'Concert One', cursive;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
