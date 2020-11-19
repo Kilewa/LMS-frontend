@@ -19,6 +19,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
+import { DeptheadComponent } from './depthead/depthead.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { EmployeetasksComponent } from './employeetasks/employeetasks.component'
     ContactComponent,
     LoginComponent,
     EmployeetasksComponent,
+    DeptheadComponent,
 
   ],
   imports: [
