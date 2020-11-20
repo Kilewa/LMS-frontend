@@ -1,35 +1,43 @@
 <body>
-    <img class="wave" src="../../assets/images/wave.png">
-    <div class="container">
-        <div class="img">
-            <img src="../../assets/images/bg.svg">
-        </div>
-        <div class="login-content">
-            <form action="index.html">
-                <img src="../../assets/images/avatar.svg">
-                <h2 class="title">Welcome</h2>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input">
-                    </div>
+    <div class="auth">
+        <div class="emp-login">
+            <div class="employee">
+                <div class="container">
+                   
+                    <form class="text-center p-5" action="#!" id="user-details">
+                        <h3 class="heading text-center">Sign UP</h3>
+                        <div class="form-row mb-4">
+                            <div class="col" id="form">
+                                <label class="input-l">First Name :</label>
+                                <input type="text" name="username" placeholder="Enter Username" required>
+                            </div>
+                            <div class="col" id="form">
+                                <label class="input-r">Lasn Name :</label>
+                                <input type="text" placeholder="Enter Email" name="email" required>
+                            </div>
+                        </div>
+                        <hr class="line">
+                        <div class="form-row mb-3">
+                            <div class="col">
+                                <label for="" class="input-l">Password :</label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            </div>
+                            <div class="col">
+                                <label for="" class="input-r">Phone Number :</label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            </div>
+                            <div class="col form-check">
+                                <a href="" class="btn btn-light">Sign Up</a>
+                                
+                               
+                            </div>
+                           
+                        </div>
+                        <hr class="line">
+                    </form>
                 </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Password</h5>
-                        <input type="password" class="input">
-                    </div>
-                </div>
-                <a href="#">Forgot Password?</a>
-                <input type="submit" class="btn" value="Login">
-            </form>
+    
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
 </body>

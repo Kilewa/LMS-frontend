@@ -1,20 +1,50 @@
 <body id="body-pd">
     <!-- Another Component -->
-
     <div class="container">
         <header class="card" id="header">
             <section class="heading">
                 <div class="toggle">
                 </div>
-
                 <h2 class="section-title ml-5" id="detail-header">Add Employee Info</h2>
+                <a href="#" class="btn btn-primary" id="btn-right">Back</a>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalSm">Save <i class="fas fa-angle-down fa-lg"></i></button>
+
+<!-- Central Modal Small -->
+<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+
+<!-- Change class .modal-sm to change the size of the modal -->
+<div class="modal-dialog modal-sm" role="document">
 
 
-                <a href="#" class="btn">Back</a>
-                <a href="#" class="btn" id="btn-right">Save</a>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+   
+    <div class="modal-body">
+        <i class="fas fa-plus"></i> Save & New
+    </div>
+
+    <div class="modal-body">
+        <i class="fas fa-chevron-left"></i> Save & Close
+    </div>
+    <div class="modal-body">
+        <i class="fas fa-times"></i> Close
+    </div>
+  </div>
+</div>
+</div>
+<!-- Central Modal Small -->
+                <!-- Button trigger modal -->
 
             </section>
             <form class="text-center p-5" action="#!" id="user-details">
+                
 
                 <div class="form-row mb-4">
                     <div class="col">
