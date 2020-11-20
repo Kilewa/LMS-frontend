@@ -14,8 +14,10 @@ import {AuthService as AuthGuard} from './core/guards/authe.service';
 
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent
-  },
+  { path: '', component: LandingPageComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: '**', redirectTo: '/'},
+  { path: '', component: LandingPageComponent},
   {path: 'departmenthead/login', component: DepthedloginComponent
   },
 
