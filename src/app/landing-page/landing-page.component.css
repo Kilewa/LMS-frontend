@@ -1,10 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+body{
+  overflow-x: hidden;
+}
 .landingpage {
   background-image: url("/assets/images/LDP.jpg");
-  /* "assets/images/cavaliers.png"  */
-  background-color: #cccccc;
-  height: 100vh;
+  background-color: rgba(10, 0, 53);
+  height: 76vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  font-family: 'Concert One', cursive;
+}
+h2{
+  padding-top: 5%;
+  font-size: 40px;
+  color: #002855;
+}
+
+p{
+  font-size: 30px;
+  color: #002855;
+}
+
+.btn{
+  margin-left: 50%;
+  background-color:  #002855;
+  color: #fff;
 }
