@@ -11,13 +11,16 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import {AuthService as AuthGuard} from './core/guards/authe.service';
+import { EmployeeidComponent } from './employeeid/employeeid.component';
 
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: '**', redirectTo: '/'},
-  { path: '', component: LandingPageComponent},
+  { path: '', component: LandingPageComponent
+  },
+
+  { path: 'contact', component: ContactComponent
+  },
+  
   {path: 'departmenthead/login', component: DepthedloginComponent
   },
 
@@ -46,6 +49,10 @@ const routes: Routes = [
   {
     path: 'employee-info', component: EmployeeinfoComponent
   },
+  {
+    path: 'employee-dp', component: EmployeeidComponent
+  },
+  { path: '**', redirectTo: '/'},
 
 ];
 canActivate: [AuthGuard]
