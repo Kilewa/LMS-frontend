@@ -1,55 +1,52 @@
 <body id="body-pd">
-    <!-- One another component -->
-
     <div class="container">
         <header class="card" id="header">
             <section class="heading">
                 <div class="toggle">
                 </div>
-
                 <h2 class="section-title ml-5 text-center" id="detail-header">Employees</h2>
-
-
                 <a href="#" class="btn">Explore now</a>
                 <a href="#" class="btn" id="btn-right">Explore now</a>
-
             </section>
-            <div class="row ml-0" id="user-details">
+            <div *ngFor="let employee of employee" class="row ml-0" id="user-details" > 
                 <div class="col-md-11">
                     <hr>
                     <div class="card-body" id="total-orders">
-
-
-
                         <table class="table table-sm">
                             <tr>
-
-                                <th>Profile Picture</th>
-                                <th>Employee Number</th>
                                 <th>First Name </th>
                                 <th>Last Name</th>
-                                <th>Emai Address </th>
                                 <th>Phone Number</th>
+                                <th>Employee Number</th>
+                                <th>Gender</th>
+                                <th>Designition</th>
+                                <th>Department</th>
                                 <th>City</th>
-                                <th>Date</th>
+                                <th>County</th>
+                                <th>Nationality</th>
+                                <th>Country</th>
+                                <th>Address</th>
+                                <th>Salary</th>
                             </tr>
-
-
                             <tr>
-                                <td> Name </td>
-                                <td> Day </td>
-
+                                <td>{{ employee.first_name }}</td>
+                                <td>{{ employee.last_name }}</td>
+                                <td>{{ employee.phone_number }}</td>
+                                <td>{{ employee.employee_number }}</td>
+                                <td>{{ employee.gender }}</td>
+                                <td>{{ employee.designition }}</td>
+                                <td>{{ employee.department }}</td>
+                                <td>{{ employee.city }}</td>
+                                <td>{{ employee.county }}</td>
+                                <td>{{ employee.nationality }}</td>
+                                <td>{{ employee.country_of_residence }}</td>
+                                <td>{{ employee.postal_address }}</td>
+                                <td>{{ employee.basic_pay }}</td>
                             </tr>
-
-
                         </table>
                     </div>
                 </div>
             </div>
         </header>
-
-
     </div>
-
-
 </body>
