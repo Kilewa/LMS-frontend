@@ -3,7 +3,7 @@
 .auth{
     background-color: #002855;
     color: #fff;
-    height: 76vh;
+    height: 80vh;
     font-family: 'Miriam Libre', sans-serif;
    
 }
@@ -53,4 +53,22 @@ button:hover{
 }
 .control-label{
     display: none;
+}
+
+
+#no_account{
+    background: transparent;
+    margin: 0 auto;
+    margin-top: 4px;
+    padding: 15px 10px 25px 50px;
+    text-align: center;
+    width: 30%;
+    top: 80%;
+    position: absolute;
+    left: 33%;
+}
+
+a,#no_account a{
+    position: relative;
+    letter-spacing: -.5px;
 }
