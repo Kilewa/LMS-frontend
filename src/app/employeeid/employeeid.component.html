@@ -1,4 +1,131 @@
 
+<body>
+    <div  *ngFor="let employee of employee" class="card-container">
+        <!-- PROFILE PICTURE FOR EMPLOYEE -->
+        <img class="round" src="../../assets/VRI.png" width="200" height="200" alt="user" />
+        <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
+        <h6>Area of residence : {{ employee.country_of_residence }}</h6>
+        <p>Department : {{ employee.department }} <br/> Role: {{ employee.designition }}</p>
+        <div class="buttons">
+    
+            <button class="primary ghost" type="button" data-toggle="modal" data-target="#myModal">View Tasks</button>
+            <br><br>
+            <button class="primary ghost" type="button" data-toggle="modal" data-target="#leaveModal"> APPLY LEAVE </button>
+            <button class="primary ghost">ON LEAVE</button>
+            <button class="primary ghost"> AT WORK </button>
+        </div>
+        <div class="skills">
+            <h6  class=" ml-5">LEAVE CALENDAR</h6>
+            <ul *ngFor="let leave of leave"  class=" ml-5">
+                <li>START DATE: {{ leave.start_date|date}}</li>
+                <li>END DATE: {{ leave.end_date|date }}</li>
+                <li>STATUS : {{ leave.status }}</li>
+                <li>REASON : {{ leave.reasons }}</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+    
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Tasks</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+    
+                <!-- Modal body -->
+                <div *ngFor="let task of task"  class="modal-body">
+                    <table class="table table-striped" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Assigned On </th>
+                                <th>Deadline</th>
+                                <th>Completed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{task.name}}</td>
+                                <td>{{task.assigned_on|date}}</td>
+                                <td>{{task.deadline|date}}</td>
+                                <td>{{task.completed}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="leaveModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+    
+                <!-- Modal Header -->
+                <!-- <div class="modal-header">
+                    <h4 class="modal-title">Apply Leave</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> -->
+    
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Apply Leave</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Reason</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <a href="" class="primary ghost">Apply</a>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- <div class="skills">
+    <h6  class=" ml-5">LEAVE </h6>
+    <ul *ngFor="let leave of leave"  class=" ml-5">
+        <li>START DATE {{ leave.start_date }}</li>
+        <li>END DATE : {{ leave.end_date }}</li>
+        <li>STATUS : {{ leave.status }}</li>
+        <li>REASON : {{ leave.reasons }}</li>
+    </ul>
+</div> -->
+
+
 <div class="card-container">
     <!-- PROFILE PICTURE FOR EMPLOYEE -->
 	<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
@@ -53,4 +180,5 @@
       </tbody>
     </table>
     </div>
+
 
