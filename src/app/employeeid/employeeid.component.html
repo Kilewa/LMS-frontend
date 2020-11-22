@@ -1,3 +1,4 @@
+
 <body>
     <div  *ngFor="let employee of employee" class="card-container">
         <!-- PROFILE PICTURE FOR EMPLOYEE -->
@@ -123,3 +124,61 @@
         <li>REASON : {{ leave.reasons }}</li>
     </ul>
 </div> -->
+
+
+<div class="card-container">
+    <!-- PROFILE PICTURE FOR EMPLOYEE -->
+	<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+	<h3>Name of Employee</h3>
+	<h6>Area of residence</h6>
+	<p>Department <br/> Role</p>
+	<div class="buttons">
+		
+		<button class="primary ghost" type="button" data-toggle="modal" data-target="#myModal">
+            Open modal
+        </button>
+	</div>
+	<div class="skills">
+		<h6 class=" ml-5">Leave </h6>
+		<ul class=" ml-5">
+			<li>TOTAL LEAVE DAYS : </li>
+			<li>REMAINING LEAVE DAYS :</li>
+			<li>COMPLETED LEAVE DAYS :</li>
+			<li>INCOMPLETE TASKS</li>
+		</ul>
+	</div>
+</div>
+
+ <!-- The Modal -->
+ <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tasks</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Task D 1</th>
+          <th>Task D 2</th>
+          <th>Task D 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Content</td>
+          <td>Content</td>
+          <td>Content</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    </div>
+
+

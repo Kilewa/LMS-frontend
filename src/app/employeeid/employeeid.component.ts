@@ -92,4 +92,11 @@ console.log("An error occured")
 });
 
 }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+
 }

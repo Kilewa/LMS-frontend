@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
 
 .auth{
     background-color: #002855;
     color: #fff;
     height: 76vh;
-    font-family: 'Concert One', cursive;
+    font-family: 'Miriam Libre', sans-serif;
+   
 }
 .form-signin{
     top: 20%;
@@ -20,11 +21,6 @@ form input{
 input[type="checkbox"]{
     margin-left: 2px;
 }
-::placeholder{
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 90px;
-}
 
 .form-check-label{
     margin-left: 30px;
@@ -35,7 +31,7 @@ input[type="checkbox"]{
 button{
     border-radius: 40px;
     text-align: center;
-    margin-left: 90px;
+    margin-left: 75px;
     margin-top: 30px;
     background-color: #FFF;
     color: #000;
@@ -44,4 +40,17 @@ button{
 button:hover{
     cursor: pointer !important;
     background-color: #837577 !important;
+}
+
+#error1, #error2{
+	color: red;
+	font-size: 15px;
+	position: relative;
+	width: 85%;
+	padding: 15px 20px 30px 15px;
+	text-align: center;
+	left: 3%;
+}
+.control-label{
+    display: none;
 }
