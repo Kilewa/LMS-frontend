@@ -4,8 +4,12 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './core/http/employee-service/employee.service';
+
+import { TaskService } from './core/http/task-service/task.service';
+
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +30,7 @@ import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
+
 
 
 @NgModule({
@@ -59,7 +64,7 @@ import { RegisterComponent } from './register/register.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,13 +8,17 @@
                 <a href="#" class="btn">Explore now</a>
                 <a href="#" class="btn" id="btn-right">Explore now</a>
             </section>
-            <div *ngFor="let employee of employee" class="row ml-0" id="user-details" > 
-                <div class="col-md-11">
+            <div class="row ml-0" id="user-details" > 
+                <div *ngFor="let employee of employee"  class="col-md-11">
                     <hr>
                     <div class="card-body" id="total-orders">
+
+                        <table   class="table table-sm">
+                            <tr>
+
                         <table class="table table-sm">
                             <tr><th>Profile Photo </th>
-                                <th>First Name </th>
+                 <th>First Name </th>
                                 <th>Last Name</th>
                                 <th>Phone Number</th>
                                 <th>Employee Number</th>

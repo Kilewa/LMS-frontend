@@ -12,6 +12,7 @@ import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { AuthService as AuthGuard}  from './core/guards/authe.service';
 import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
+import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
 
 
@@ -49,9 +50,13 @@ const routes: Routes = [
   {
     path: 'employee-tasks', component: EmployeetasksComponent
   },
+
+  { path: 'employee-id', component: EmployeeidComponent },
+
   {
     path: 'manager-registration', component: RegisterComponent
   },
+
   
   { path: '**', redirectTo: '/'},
 

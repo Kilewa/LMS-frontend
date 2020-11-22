@@ -13,7 +13,6 @@ export class EmployeeService {
   employee: Employee;
 
   constructor(private httpClient:HttpClient) {
-
   }
 employeeRequest(){
   interface ApiResponse{
@@ -32,5 +31,6 @@ employeeRequest(){
     basic_pay: number;
   }
 }
+
 }
 
