@@ -1,59 +1,114 @@
-<body id="body-pd">
-    <header class="header" id="header">
-        <div class="header__toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>HR Management</h3>
         </div>
 
-        <div class="header__img">
-            <img src="" alt="">
-        </div>
-    </header>
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Manage Employees</a>
+                    </li>
+                    <li>
+                        <a href="#">Manage Leave</a>
+                    </li>
+                    <li>
+                        <a href="#">View Departments</a>
+                    </li>
+                    <li>
+                        <a href="#">View Attendance</a>
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
 
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div>
-                <a href="#" class="nav__logo">
-                    <i class='bx bx-layer nav__logo-icon'></i>
-                    <span class="nav__logo-name">HR Management</span>
-                </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Expenses</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">View Expenses</a>
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
 
-                <div class="nav__list">
-                    <a href="/role" class="nav__link active">
-                        <i class='bx bx-grid-alt nav__icon'></i>
-                        <span class="nav__name">Dashboard</span>
-                    </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Awards</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">View Awards</a>
+                    </li>
 
-                    <a href="/employee-info" class="nav__link">
-                        <i class='bx bx-user nav__icon'></i>
-                        <span class="nav__name">Users</span>
-                    </a>
+                </ul>
+            </li>
+            <br>
+            <li>
 
-                    <a href="/search" class="nav__link">
-                        <i class='bx bx-message-square-detail nav__icon'></i>
-                        <span class="nav__name">Messages</span>
-                    </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Memo</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Add Memo</a>
+                    </li>
+                    <li>
+                        <a href="#">View Memo</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
 
-                    <a href="/user-detail" class="nav__link">
-                        <i class='bx bx-bookmark nav__icon'></i>
-                        <span class="nav__name">Favorites</span>
-                    </a>
 
-                    <a href="/employees" class="nav__link">
-                        <i class='bx bx-folder nav__icon'></i>
-                        <span class="nav__name">Data</span>
-                    </a>
+        </ul>
 
-                    <a href="/" class="nav__link">
-                        <i class='bx bx-bar-chart-alt-2 nav__icon'></i>
-                        <span class="nav__name">Analytics</span>
-                    </a>
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fas fa-bell"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0" href="#">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <a href="#" class="nav__link">
-                <i class='bx bx-log-out nav__icon'></i>
-                <span class="nav__name">Log Out</span>
-            </a>
         </nav>
+        <!--  Components  -->
     </div>
-</body>
+</div>
