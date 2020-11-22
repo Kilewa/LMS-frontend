@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './core/http/employee-service/employee.service';
+import { TaskService } from './core/http/task-service/task.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,7 +54,7 @@ import { EmployeeidComponent } from './employeeid/employeeid.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
