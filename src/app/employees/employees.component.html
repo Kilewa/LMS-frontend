@@ -12,9 +12,13 @@
                 <div *ngFor="let employee of employee"  class="col-md-11">
                     <hr>
                     <div class="card-body" id="total-orders">
+
                         <table   class="table table-sm">
                             <tr>
-                                <th>First Name </th>
+
+                        <table class="table table-sm">
+                            <tr><th>Profile Photo </th>
+                 <th>First Name </th>
                                 <th>Last Name</th>
                                 <th>Phone Number</th>
                                 <th>Employee Number</th>
@@ -28,7 +32,8 @@
                                 <th>Address</th>
                                 <th>Salary</th>
                             </tr>
-                            <tr>
+                            <tr> 
+                                <td>{{employee.profile_photo}}</td>
                                 <td>{{ employee.first_name }}</td>
                                 <td>{{ employee.last_name }}</td>
                                 <td>{{ employee.phone_number }}</td>
