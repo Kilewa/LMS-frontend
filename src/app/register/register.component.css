@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+.auth{
+    background-color: #002855;
+    color: #fff;
+    height: 92vh;
+    font-family: 'Concert One', cursive;
+}
+
+.form-signin{
+    top: 20%;
+    width: 28%;
+    left: 35%;
+    position: absolute;
+}
+
+form input{
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+input[type="checkbox"]{
+    margin-left: 2px;
+}
+
+.form-check-label{
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+
+button{
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 30px;
+    background-color: #FFF;
+    color: #000;
+}
+
+button:hover{
+    cursor: pointer !important;
+    background-color: #837577 !important;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f7f7f7;
+      font-family: Montserrat,Arial, Helvetica, sans-serif;
+  }
+  select {
+    width: 18%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f7f7f7;
+      font-family: Montserrat,Arial, Helvetica, sans-serif;
+  }
+  
+  #form{
+      margin-top: 55px;
+  }
+  .heading{
+    margin-top: 55px;
+  }

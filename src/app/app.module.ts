@@ -22,6 +22,7 @@ import { EmployeetasksComponent } from './employeetasks/employeetasks.component'
 import { DeptheadComponent } from './depthead/depthead.component';
 import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
+import { EmployeeidComponent } from './employeeid/employeeid.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
     EmployeetasksComponent,
     DeptheadComponent,
     DepthedloginComponent,
-    EmployeeloginComponent
+    EmployeeloginComponent,
+    EmployeeidComponent
 
   ],
   imports: [
