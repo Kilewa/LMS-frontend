@@ -1,15 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-
-.auth{
-    background-color: #002855;
-    color: #fff;
-    height: 92vh;
-    font-family: 'Concert One', cursive;
-}
-
-.form-signin{
-    top: 20%;
 
 @import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
 .auth{

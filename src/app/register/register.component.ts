@@ -11,13 +11,6 @@ import {AuthServiceService} from '../core/authentication/auth.service'
 export class RegisterComponent implements OnInit {
 
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
-
   public regmgr:any
 
 
@@ -41,6 +34,9 @@ export class RegisterComponent implements OnInit {
   registerManager=()=>{
     this._authService.registerUser(this.regmgr)
   }
-
 }
+
+
+
+
 

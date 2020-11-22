@@ -30,6 +30,7 @@ export class EmployeeidComponent implements OnInit {
   }
 
   interface ApiResponse{
+    profile_photo: any,
     first_name:string;
     last_name: string;
     phone_number: number;
@@ -74,7 +75,7 @@ this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscri
 },
  
 error =>{
-  this.employee = new Employee("first_name", "last_name", 0, 0, "gender", "designition", "department", "city", "county", "nationality", "country", "address", 0)
+  this.employee = new Employee("profile_photo","first_name", "last_name", 0, 0, "gender", "designition", "department", "city", "county", "nationality", "country", "address", 0)
 console.log("An error occured")
 
 });
@@ -92,11 +93,5 @@ console.log("An error occured")
 });
 
 }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 
 }
