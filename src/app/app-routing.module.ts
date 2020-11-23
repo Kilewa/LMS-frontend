@@ -16,6 +16,7 @@ import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
 import { LeavesComponent } from './leaves/leaves.component';
 import { EmployeeregistrationComponent } from './employeeregistration/employeeregistration.component';
+import { SuccessComponent } from './success/success.component';
 
 
 const routes: Routes = [
@@ -44,7 +45,10 @@ const routes: Routes = [
     path: 'role', component: ManagerolesComponent
   },
   {
-    path: 'reisteremployee', component: EmployeeregistrationComponent
+    path: 'success', component:  SuccessComponent
+  },
+  {
+    path: 'registeremployee', component: EmployeeregistrationComponent
   },
   {
     path: 'user-detail', component: UpduserdetailsComponent

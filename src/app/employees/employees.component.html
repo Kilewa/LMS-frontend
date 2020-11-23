@@ -5,8 +5,7 @@
                 <div class="toggle">
                 </div>
                 <h2 class="section-title ml-5 text-center" id="detail-header">Employees</h2>
-                <a href="#" class="btn">Explore now</a>
-                <a href="#" class="btn" id="btn-right">Explore now</a>
+                <a routerLink="/registeremployee" class="btn">Add Employee</a>
             </section>
             <div class="row ml-0" id="user-details" > 
                 <div *ngFor="let employee of employee"  class="col-md-11">
@@ -31,8 +30,8 @@
                             </tr>
                             <tr> 
                                 <td>{{employee.profile_photo}}</td>
-                                <td>{{ employee.first_name }}</td>
-                                <td>{{ employee.last_name }}</td>
+                                <td>{{ employee.user.first_name }}</td>
+                                <td>{{ employee.user.last_name }}</td>
                                 <td>{{ employee.phone_number }}</td>
                                 <td>{{ employee.employee_number }}</td>
                                 <td>{{ employee.gender }}</td>

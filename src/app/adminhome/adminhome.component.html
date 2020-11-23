@@ -1,173 +1,214 @@
-<body id="body-pd">
-    <br>
-    <div class="row animated slideInUp ml-5">
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Total Employees</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- <h3 class="card-title"> 30 </h3> -->
-                        <!-- <h3 class="card-title"> {{i}} and {{employee.length}} or {{employee.first_name}} </h3> -->
-                        <!-- <h3 class="card-title">test</h3> -->
-                        <h3 class="card-title">{{employee.length}}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+    <div class="container">
+        <div>
+            <h4 class="mb-4 text-muted">Dashboard </h4>
 
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Staff on leave</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- <h3 class="card-title"> 30 </h3> -->
-                        <h3 class="card-title">{{leave.length}}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="row">
 
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white  mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Total Departments</h5>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"> 30 </h3>
-                        <!-- <h3 class="card-title"> {{employee}}</h3> -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-light">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Total Employees</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">N0. of Employees</small>
+                            <small class="text-success ml-auto">
+                                  <!-- <i class="fa fa-caret-up" aria-hidden="true"></i> -->
+                                   5,35
+                                </small>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white  mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Total Work Tasks</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- <h3 class="card-title"> 30 </h3> -->
-                        <h3 class="card-title"> {{task.length}}</h3>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-light">
+                                    <i class="fas fa-bed" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Leave Days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Days </small>
+                            <small class="text-success ml-auto">
+                                  8,66%
+                                </small>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <br>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-light">
+                                    <i class="fas fa-check-double"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Approved Leaves</p>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">App No of Leaves</small>
+                            <small class="text-danger ml-auto">
+                                  2,81%
+                                </small>
+                        </div>
+                    </div>
+                </div>
 
-    <br>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-light">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Total Work Tasks</p>
 
-    <div class="row ml-5">
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Attendance</h5>
-            <hr>
-            <div class="card card-body animated slideInLeft" id="total-orders">
-                <table class="table table-sm">
-                    <tr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Tasks</small>
+                            <small class="text-success ml-auto">
+                                    
+                                  174%
+                                </small>
+                        </div>
+                    </div>
+                </div>
 
-                        <th>Numbers/People</th>
-
-                        <th>Time</th>
-                    </tr>
-
-
-                    <tr>
-                        <td>content </td>
-                        <td>content </td>
-
-                    </tr>
-
-
-                </table>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Expense Report</h5>
-            <hr>
-            <div class="card card-body animated slideInRight" id="total-orders">
-
-                <table class="table table-sm">
-                    <tr>
-
-                        <th>Expense Report</th>
-                    </tr>
-
-
-                    <tr>
-                        <td> content </td>
-                        <td> content </td>
-                        <td> content </td>
-
-
-                    </tr>
-
-
-                </table>
             </div>
         </div>
 
-    </div>
+        <div class="row">
+            <div class="col">
+                <div class="card border-0 rounded-0">
+                    <div class="card-title mb-1 p-3">
+                        <h5>Attendance</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td><i class="fas fa-check"></i></td>
 
-    <br>
-    <div class="row ml-5">
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Todays Month</h5>
-            <hr>
-            <div class="card card-body animated slideInLeft" id="total-orders">
-                <table class="table table-sm">
-                    <tr>
 
-                        <th>The Employee</th>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                        <th>Date</th>
-                    </tr>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 h-100">
+                    <div class="card-title mb-1 p-3">
+                        <h5>Expense Report</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td><i class="fas fa-check"></i></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-
-                    <tr>
-                        <td> Name </td>
-                        <td>Day </td>
-
-                    </tr>
-
-
-                </table>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Employee Award</h5>
-            <hr>
-            <div class="card card-body animated slideInRight" id="total-orders">
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card border-0 rounded-0">
+                    <div class="card-title mb-1 p-3">
+                        <h5>Todays Month Birthday</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td><i class="fas fa-check"></i></td>
 
-                <table class="table table-sm">
-                    <tr>
 
-                        <th>Employees Name</th>
-                        <th>Awards</th>
-                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 h-100">
+                    <div class="card-title mb-1 p-3">
+                        <h5>Awards</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td><i class="fas fa-check"></i></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td> Name of Employee </td>
-                        <td> Award to Employee </td>
-
-
-
-                    </tr>
-
-
-                </table>
             </div>
         </div>
-
     </div>
 </body>

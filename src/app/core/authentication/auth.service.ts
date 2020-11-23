@@ -80,7 +80,7 @@ export class AuthServiceService {
       	if (data.user.role===2) {
         	this.router.navigate(['/departmenthead/login'])
       	}else if(data.user.role===3){
-      		this.router.navigate(['/employee/login'])
+      		this.router.navigate(['/success'])
       	}
        
       },
@@ -127,7 +127,7 @@ export class AuthServiceService {
       this.http.get(`${environment.apiUrl}accounts/api/employee/${token_decoded.user_id}`, this.httpOptions).subscribe(
       data => {
         localStorage.setItem('auth_user',JSON.stringify(data))
-        this.router.navigate(['employee-info'])
+        this.router.navigate(['employee-id'])
       },
       err => {
         console.log(err)

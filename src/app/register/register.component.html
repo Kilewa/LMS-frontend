@@ -6,22 +6,22 @@
             <form  name="managerregForm" id="managerregForm" #managerregForm='ngForm'>
                 <h5 class="text-center mt-2">MANAGER HRM SIGN UP</h5>
 
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                     <input type="text" class="form-control" #first_name='ngModel' ng-model="first_name" [(ngModel)]="regmgr.first_name" placeholder="First Name" required id="first_name" name="First_Name">
                     <div [hidden]="first_name.valid || first_name.pristine" class="alert alert-danger">
                         <p>First Name is required</p>
                     </div>
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                     <input type="text" class="form-control" #last_name='ngModel' ng-model="last_name" [(ngModel)]="regmgr.last_name" required id="last_name" placeholder="Last Name" name="last_name">
                     <div [hidden]="last_name.valid || last_name.pristine" class="alert alert-danger">
                         <p>Last Name is required</p>
                     </div>
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                     <input type="text" disabled class="form-control" id="role" name="role"  value="Manager">
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                     <input type="email" class="form-control" #email='ngModel' ng-model="email" [(ngModel)]="regmgr.email" placeholder="Email Address" required id="email" name="email" >
                     <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
                         <p>Invalid Email Address</p>
@@ -30,19 +30,19 @@
                         <p>{{error.email}}</p>
                     </div>		
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                     <input type="text" class="form-control" #address='ngModel' ng-model="address" [(ngModel)]="regmgr.address" placeholder="Postal Address" required id="address" name="address" >
                     <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
                         <p>Address is required</p>
                     </div>
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                 <input type="number" #mobile='ngModel' ng-model="mobile" [(ngModel)]="regmgr.mobile" required id="mobile" min="10" name="mobile" placeholder="Mobile Number" class="form-control">
                 <div [hidden]="mobile.valid || mobile.pristine" class="alert alert-danger">
                         <p>Mobile number is required</p>
                 </div>
                 </div>
-                <div class="form-group mt-4">
+                <div class="form-group mt-2">
                 <input type="password" #password='ngModel' ng-model="password" [(ngModel)]="regmgr.password" required id="password" name="password" placeholder="Password" class="form-control">
                 <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
                         <p>Password is required</p>
