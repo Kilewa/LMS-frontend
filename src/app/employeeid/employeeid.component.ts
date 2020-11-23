@@ -4,7 +4,10 @@ import { Task } from '../employeetasks/task';
 import { Employee } from '../employees/employee';
 import { Leave } from '../employees/leave';
 import { HttpClient } from '@angular/common/http';
+import { throwError } from 'rxjs';
+
 import { environment } from '../../environments/environment';
+
 
 @Component({
   selector: 'app-employeeid',
@@ -16,6 +19,7 @@ export class EmployeeidComponent implements OnInit {
   task:Task;
   employee:Employee;
   leave:Leave;
+  public new_leave:any;
 
   constructor(private taskService: TaskService, private http: HttpClient) { }
 
