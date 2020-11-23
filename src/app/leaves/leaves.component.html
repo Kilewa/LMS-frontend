@@ -1,0 +1,46 @@
+<body>
+    <div *ngFor="let leave of leave" class="row ml-0" id="user-details" > 
+        <div *ngFor="let employee of employee"  class="col-md-11">
+            <hr>
+            <div class="card-body" id="total-orders">
+                <table class="table table-sm">
+                    <tr>
+                        <th>Profile Photo </th>
+                        <th>First Name </th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Employee Number</th>
+                        <th>Gender</th>
+                        <th>Designition</th>
+                        <th>Department</th>
+                        <th>Start Date</th>
+                        <th>End date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr> 
+                        <td>{{employee.profile_photo}}</td>
+                        <td>{{ employee.first_name }}</td>
+                        <td>{{ employee.last_name }}</td>
+                        <td>{{ employee.phone_number }}</td>
+                        <td>{{ employee.employee_number }}</td>
+                        <td>{{ employee.gender }}</td>
+                        <td>{{ employee.designition }}</td>
+                        <td>{{ employee.department }}</td>
+                        <td>{{ leave.start_date|date}}</td>
+                        <td>{{ leave.end_date|date }}</td>
+                        <td> {{ leave.reasons }}</td>
+                        <td><button *ngIf="leave.status==='Approved'" class="btn btn-success btn-sm waves-effect">APPROVED</button>
+                            <button *ngIf="leave.status==='Pending'" class="btn btn-warning btn-sm waves-effect">PENDING</button>
+                            <button *ngIf="leave.status==='Denied'" class="btn btn-danger btn-sm waves-effect">DECLINED</button>
+                        </td>
+                        <td><button  *ngIf="leave.status==='Pending'" (click)="approveLeave(leave)" class="btn btn-success btn-sm waves-effect">Approve</button>
+                        </td>
+                        <td> <button  *ngIf="leave.status==='Pending'" (click)="declineLeave(leave)" class="btn btn-danger btn-sm waves-effect">Decline</button></td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

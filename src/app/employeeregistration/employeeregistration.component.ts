@@ -1,27 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
 import {AuthServiceService} from '../core/authentication/auth.service'
 
-
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-employeeregistration',
+  templateUrl: './employeeregistration.component.html',
+  styleUrls: ['./employeeregistration.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class EmployeeregistrationComponent implements OnInit {
 
-
-  public regmgr:any
-
-
+  public regemp:any
 
   constructor(public _authService:AuthServiceService) { }
 
   ngOnInit(): void {
-    this.regmgr = {
+    this.regemp = {
         first_name: '',
         last_name: '',
-        role:2,
+        role:3,
         email: '',
         address:'',
         mobile:'',
@@ -31,12 +26,8 @@ export class RegisterComponent implements OnInit {
     this._authService.regErrors=[]
   }
 
-  registerManager=()=>{
-    this._authService.registerUser(this.regmgr)
+  registerEmp=()=>{
+    this._authService.registerUser(this.regemp)
   }
 }
-
-
-
-
 

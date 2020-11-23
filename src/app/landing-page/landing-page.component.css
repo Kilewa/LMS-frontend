@@ -7,7 +7,7 @@ body{
 .landingpage {
   background-image: url("/assets/images/LDP.jpg");
   background-color: rgba(10, 0, 53);
-  height: 76vh;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
