@@ -14,6 +14,7 @@ import { AuthService as AuthGuard}  from './core/guards/authe.service';
 import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
+import { LeavesComponent } from './leaves/leaves.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,9 @@ const routes: Routes = [
   },
   
   { path: 'contact', component: ContactComponent  
+  },
+
+  { path: 'leaves', component: LeavesComponent  
   },
 
   {
