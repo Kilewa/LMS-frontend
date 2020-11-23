@@ -1,3 +1,4 @@
+
 <body id="body-pd">
     <br>
     <div class="row animated slideInUp ml-5">
@@ -14,8 +15,15 @@
                         <h3 class="card-title">{{employee.length}}</h3>
                     </div>
                 </div>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>HR Management</h3>
+
             </div>
-        </div>
+
 
         <div class="col">
             <div class="col-md">
@@ -26,39 +34,221 @@
                     <div class="card-body">
                         <!-- <h3 class="card-title"> 30 </h3> -->
                         <h3 class="card-title">{{leave.length}}</h3>
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Manage Employees</a>
+                        </li>
+                        <li>
+                            <a href="#">Manage Leave</a>
+                        </li>
+                        <li>
+                            <a href="#">View Departments</a>
+                        </li>
+                        <li>
+                            <a href="#">View Attendance</a>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Expenses</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">View Expenses</a>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Awards</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">View Awards</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <br>
+                <li>
+
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Memo</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Add Memo</a>
+                        </li>
+                        <li>
+                            <a href="#">View Memo</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link waves-effect waves-light">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light">
+                                    <i class="fas fa-bell"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#">
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
-            </div>
-        </div>
+            </nav>
 
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white  mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Total Departments</h5>
+            <div>
+                <h4 class="mb-4 text-muted">Dashboard </h4>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card border-0 rounded-0">
+                            <div class="card-body">
+                                <div class="card-innerBody d-flex align-items-center">
+                                    <div class="card-icon text-light">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <p class="card-label text-right text-muted">Total Employees</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex ">
+                                <small class="text-muted">N0. of Employees</small>
+                                <small class="text-success ml-auto">
+                          <!-- <i class="fa fa-caret-up" aria-hidden="true"></i> -->
+                           5,35
+                        </small>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card-body">
                         <h3 class="card-title"> 30 </h3>
                         <!-- <h3 class="card-title"> {{employee}}</h3> -->
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div class="col-md">
-                <div class="card text-center text-white  mb-3" id="total-orders">
-                    <div class="card-header">
-                        <h5 class="card-title">Total Work Tasks</h5>
+
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card border-0 rounded-0">
+                            <div class="card-body">
+                                <div class="card-innerBody d-flex align-items-center">
+                                    <div class="card-icon text-light">
+                                        <i class="fas fa-bed" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <p class="card-label text-right text-muted">Leave Days</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex ">
+                                <small class="text-muted">Days </small>
+                                <small class="text-success ml-auto">
+                          8,66%
+                        </small>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card border-0 rounded-0">
+                            <div class="card-body">
+                                <div class="card-innerBody d-flex align-items-center">
+                                    <div class="card-icon text-light">
+                                        <i class="fas fa-check-double"></i>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <p class="card-label text-right text-muted">Approved Leaves</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex ">
+                                <small class="text-muted">App No of Leaves</small>
+                                <small class="text-danger ml-auto">
+                          2,81%
+                        </small>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card-body">
                         <!-- <h3 class="card-title"> 30 </h3> -->
                         <h3 class="card-title"> {{task.length}}</h3>
+
+
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card border-0 rounded-0">
+                            <div class="card-body">
+                                <div class="card-innerBody d-flex align-items-center">
+                                    <div class="card-icon text-light">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <p class="card-label text-right text-muted">Total Work Tasks</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex ">
+                                <small class="text-muted">Tasks</small>
+                                <small class="text-success ml-auto">
+                            
+                          174%
+                        </small>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-        </div>
-    </div>
+
 
     <br>
 
@@ -85,89 +275,123 @@
 
                     </tr>
 
+            <div class="row">
+                <div class="col">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-title mb-1 p-3">
+                            <h5>Attendance</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><i class="fas fa-check"></i></td>
 
-                </table>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col">
+                    <div class="card border-0 rounded-0 h-100">
+                        <div class="card-title mb-1 p-3">
+                            <h5>Expense Report</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><i class="fas fa-check"></i></td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Expense Report</h5>
-            <hr>
-            <div class="card card-body animated slideInRight" id="total-orders">
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-title mb-1 p-3">
+                            <h5>Todays Month Birthday</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><i class="fas fa-check"></i></td>
 
-                <table class="table table-sm">
-                    <tr>
 
-                        <th>Expense Report</th>
-                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="col">
+                    <div class="card border-0 rounded-0 h-100">
+                        <div class="card-title mb-1 p-3">
+                            <h5>Awards</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><i class="fas fa-check"></i></td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-                    <tr>
-                        <td> content </td>
-                        <td> content </td>
-                        <td> content </td>
-
-
-                    </tr>
-
-
-                </table>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <br>
-    <div class="row ml-5">
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Todays Month</h5>
-            <hr>
-            <div class="card card-body animated slideInLeft" id="total-orders">
-                <table class="table table-sm">
-                    <tr>
 
-                        <th>The Employee</th>
-
-                        <th>Date</th>
-                    </tr>
-
-
-                    <tr>
-                        <td> Name </td>
-                        <td>Day </td>
-
-                    </tr>
-
-
-                </table>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <h5 class=" animated slideInDown">Employee Award</h5>
-            <hr>
-            <div class="card card-body animated slideInRight" id="total-orders">
-
-                <table class="table table-sm">
-                    <tr>
-
-                        <th>Employees Name</th>
-                        <th>Awards</th>
-                    </tr>
-
-
-                    <tr>
-                        <td> Name of Employee </td>
-                        <td> Award to Employee </td>
-
-
-
-                    </tr>
-
-
-                </table>
-            </div>
-        </div>
-
-    </div>
 </body>
