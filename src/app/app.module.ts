@@ -31,6 +31,7 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
 import { LeavesComponent } from './leaves/leaves.component';
+import { EmployeeregistrationComponent } from './employeeregistration/employeeregistration.component';
 
 
 
@@ -56,6 +57,7 @@ import { LeavesComponent } from './leaves/leaves.component';
     EmployeeidComponent,
     HeaderComponent,
     LeavesComponent,
+    EmployeeregistrationComponent,
 
   ],
   imports: [

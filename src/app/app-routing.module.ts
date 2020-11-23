@@ -15,6 +15,7 @@ import { EmployeetasksComponent } from './employeetasks/employeetasks.component'
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
 import { LeavesComponent } from './leaves/leaves.component';
+import { EmployeeregistrationComponent } from './employeeregistration/employeeregistration.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,9 @@ const routes: Routes = [
 
   {
     path: 'role', component: ManagerolesComponent
+  },
+  {
+    path: 'reisteremployee', component: EmployeeregistrationComponent
   },
   {
     path: 'user-detail', component: UpduserdetailsComponent
