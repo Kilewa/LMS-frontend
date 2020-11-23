@@ -1,43 +1,61 @@
-<body>
-    <div class="auth">
-        <div class="emp-login">
-            <div class="employee">
-                <div class="container">
-                   
-                    <form class="text-center p-5" action="#!" id="user-details">
-                        <h3 class="heading text-center">Sign UP</h3>
-                        <div class="form-row mb-4">
-                            <div class="col" id="form">
-                                <label class="input-l">First Name :</label>
-                                <input type="text" name="username" placeholder="Enter Username" required>
-                            </div>
-                            <div class="col" id="form">
-                                <label class="input-r">Lasn Name :</label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
-                            </div>
-                        </div>
-                        <hr class="line">
-                        <div class="form-row mb-3">
-                            <div class="col">
-                                <label for="" class="input-l">Password :</label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                            </div>
-                            <div class="col">
-                                <label for="" class="input-r">Phone Number :</label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                            </div>
-                            <div class="col form-check">
-                                <a href="" class="btn btn-light">Sign Up</a>
-                                
-                               
-                            </div>
-                           
-                        </div>
-                        <hr class="line">
-                    </form>
+
+
+<div class="auth">
+	<div class="form-signin">
+		<div>
+            <form  name="managerregForm" id="managerregForm" #managerregForm='ngForm'>
+                <h5 class="text-center mt-2">MANAGER HRM SIGN UP</h5>
+
+                <div class="form-group mt-4">
+                    <input type="text" class="form-control" #first_name='ngModel' ng-model="first_name" [(ngModel)]="regmgr.first_name" placeholder="First Name" required id="first_name" name="First_Name">
+                    <div [hidden]="first_name.valid || first_name.pristine" class="alert alert-danger">
+                        <p>First Name is required</p>
+                    </div>
                 </div>
-    
-            </div>
-        </div>
-    </div>
-</body>
+                <div class="form-group mt-4">
+                    <input type="text" class="form-control" #last_name='ngModel' ng-model="last_name" [(ngModel)]="regmgr.last_name" required id="last_name" placeholder="Last Name" name="last_name">
+                    <div [hidden]="last_name.valid || last_name.pristine" class="alert alert-danger">
+                        <p>Last Name is required</p>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                    <input type="text" disabled class="form-control" id="role" name="role"  value="Manager">
+                </div>
+                <div class="form-group mt-4">
+                    <input type="email" class="form-control" #email='ngModel' ng-model="email" [(ngModel)]="regmgr.email" placeholder="Email Address" required id="email" name="email" >
+                    <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                        <p>Invalid Email Address</p>
+                    </div>
+                    <div *ngFor="let error of _authService.regErrors" class="alert alert-danger">
+                        <p>{{error.email}}</p>
+                    </div>		
+                </div>
+                <div class="form-group mt-4">
+                    <input type="text" class="form-control" #address='ngModel' ng-model="address" [(ngModel)]="regmgr.address" placeholder="Postal Address" required id="address" name="address" >
+                    <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+                        <p>Address is required</p>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                <input type="number" #mobile='ngModel' ng-model="mobile" [(ngModel)]="regmgr.mobile" required id="mobile" min="10" name="mobile" placeholder="Mobile Number" class="form-control">
+                <div [hidden]="mobile.valid || mobile.pristine" class="alert alert-danger">
+                        <p>Mobile number is required</p>
+                </div>
+                </div>
+                <div class="form-group mt-4">
+                <input type="password" #password='ngModel' ng-model="password" [(ngModel)]="regmgr.password" required id="password" name="password" placeholder="Password" class="form-control">
+                <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                        <p>Password is required</p>
+                </div>
+                </div>
+                <div class="form-group text-center">
+                <button (click)="registerManager()" [disabled]="!managerregForm.valid" class="btn" type="submit">Sign up</button>
+                </div>
+            </form>
+		</div>
+	</div>  
+	<div id = "no_account">
+        <h6>Have an account? <a routerLink="/departmenthead/login" class="text-white" routerLinkActive="active"> Log in</a></h6>
+	</div>
+</div>
+

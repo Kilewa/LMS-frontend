@@ -10,18 +10,19 @@ import { ContactComponent } from './contact/contact.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
-import {AuthService as AuthGuard} from './core/guards/authe.service';
+import { AuthService as AuthGuard}  from './core/guards/authe.service';
+import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
+import { EmployeeidComponent } from './employeeid/employeeid.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
   { path: 'contact', component: ContactComponent},
-  { path: '**', redirectTo: '/'},
-  { path: '', component: LandingPageComponent},
-  {path: 'departmenthead/login', component: DepthedloginComponent
+  { path: 'departmenthead/login', component: DepthedloginComponent
   },
 
-  {path: 'employee/login', component: EmployeeloginComponent
+  { path: 'employee/login', component: EmployeeloginComponent
   },
   
   { path: 'contact', component: ContactComponent  
@@ -46,6 +47,18 @@ const routes: Routes = [
   {
     path: 'employee-info', component: EmployeeinfoComponent
   },
+  {
+    path: 'employee-tasks', component: EmployeetasksComponent
+  },
+
+  { path: 'employee-id', component: EmployeeidComponent },
+
+  {
+    path: 'manager-registration', component: RegisterComponent
+  },
+
+  
+  { path: '**', redirectTo: '/'},
 
 ];
 canActivate: [AuthGuard]
