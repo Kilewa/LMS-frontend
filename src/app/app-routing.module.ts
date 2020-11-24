@@ -14,6 +14,9 @@ import { AuthService as AuthGuard}  from './core/guards/authe.service';
 import { EmployeetasksComponent } from './employeetasks/employeetasks.component';
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
+import { LeavesComponent } from './leaves/leaves.component';
+import { EmployeeregistrationComponent } from './employeeregistration/employeeregistration.component';
+import { SuccessComponent } from './success/success.component';
 
 
 const routes: Routes = [
@@ -28,6 +31,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent  
   },
 
+  { path: 'leaves', component: LeavesComponent  
+  },
+
   {
     path: 'admin', component: AdminhomeComponent
   },
@@ -37,6 +43,12 @@ const routes: Routes = [
 
   {
     path: 'role', component: ManagerolesComponent
+  },
+  {
+    path: 'success', component:  SuccessComponent
+  },
+  {
+    path: 'registeremployee', component: EmployeeregistrationComponent
   },
   {
     path: 'user-detail', component: UpduserdetailsComponent

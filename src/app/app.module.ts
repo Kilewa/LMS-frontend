@@ -30,6 +30,9 @@ import { DepthedloginComponent } from './depthedlogin/depthedlogin.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { RegisterComponent } from './register/register.component';
+import { LeavesComponent } from './leaves/leaves.component';
+import { EmployeeregistrationComponent } from './employeeregistration/employeeregistration.component';
+import { SuccessComponent } from './success/success.component';
 
 
 
@@ -52,7 +55,11 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent,
     DepthedloginComponent,
     EmployeeloginComponent,
-    EmployeeidComponent
+    EmployeeidComponent,
+    HeaderComponent,
+    LeavesComponent,
+    EmployeeregistrationComponent,
+    SuccessComponent,
 
   ],
   imports: [

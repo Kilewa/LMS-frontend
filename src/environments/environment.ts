@@ -2,9 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// export const environment = {
+//   production: false,
+//   apiUrl:'http://127.0.0.1:8000/'
+
+// };
 export const environment = {
   production: false,
-  apiUrl:'http://cavaliershrmsapi.herokuapp.com/'
+  apiUrl:'https://cavaliershrmsapi.herokuapp.com/'
 };
 
 // http://127.0.0.1:8000/accounts/api/employee

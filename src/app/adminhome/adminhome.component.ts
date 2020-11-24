@@ -15,6 +15,9 @@ export class AdminhomeComponent implements OnInit {
   task:Task;
   employee:Employee;
   leave:Leave;
+  total_staff:any;
+  total_tasks:any;
+  staff_on_leave:any;
 
   constructor(private http: HttpClient) { }
 
@@ -58,7 +61,9 @@ export class AdminhomeComponent implements OnInit {
   this.http.get<ApiResponse>(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
     this.task = data
     data=data
-    console.log(data)
+    this.total_tasks=Object.keys(data).length
+    console.log(Object.keys(data).length)
+   
   },
   error =>{
     this.task = new Task(0, "name", "assigned_on", "deadline", "completed", "assigned_to")
@@ -69,8 +74,8 @@ export class AdminhomeComponent implements OnInit {
 
 this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
   this.employee = data
-  data=data
-  console.log(data)
+  this.total_staff=Object.keys(data).length
+  console.log(Object.keys(data).length)
 },
  
 error =>{
@@ -82,7 +87,8 @@ console.log("An error occured")
 this.http.get<ApiResponse>(`${environment.apiUrl}leaves/leave/applications/`).subscribe(data=>{
   this.leave = data
   data=data
-  console.log(data)
+  this.staff_on_leave=Object.keys(data).length
+  console.log(Object.keys(data).length)
 },
  
 error =>{

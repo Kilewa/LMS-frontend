@@ -1,10 +1,8 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
 .auth{
     background-color: #002855;
     color: #fff;
-    height: 110vh;
+    height: 100vh;
     font-family: 'Miriam Libre', sans-serif;
 }
 
@@ -49,9 +47,11 @@ button{
     text-align: center;
     margin-left: 5px;
     margin-top: 30px;
+
     border-radius: 35px;
     text-align: center;
     margin-top: 20px;
+
     background-color: #FFF;
     color: #000;
 }
@@ -69,7 +69,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: none;
     background: #f7f7f7;
-    font-family: Montserrat,Arial, Helvetica, sans-serif;
+      font-family: Montserrat,Arial, Helvetica, sans-serif;
   }
   select {
     width: 18%;
@@ -78,7 +78,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: none;
     background: #f7f7f7;
-    font-family: Montserrat,Arial, Helvetica, sans-serif;
+      font-family: Montserrat,Arial, Helvetica, sans-serif;
   }
   
   #form{
@@ -88,17 +88,6 @@ input[type=text], input[type=password] {
     margin-top: 55px;
   }
 
-#no_account{
-    background: transparent;
-    margin: 0 auto;
-    margin-top: 4px;
-    padding: 15px 10px 25px 50px;
-    text-align: center;
-    width: 30%;
-    top: 110%;
-    position: absolute;
-    left: 33%;
-}
 
 a,#no_account a{
     position: relative;
