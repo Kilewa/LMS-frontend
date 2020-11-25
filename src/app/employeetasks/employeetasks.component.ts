@@ -49,7 +49,7 @@ export class EmployeetasksComponent implements OnInit {
       basic_pay : number
     }
 
-    this.http.get<ApiResponse>(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
+    this.http.get<ApiResponse>(`${environment.apiurl}tasks/all-tasks/`).subscribe(data=>{
       this.task = data
       data=data
       console.log(data)
@@ -61,7 +61,7 @@ export class EmployeetasksComponent implements OnInit {
   });
 
 
-  this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
+  this.http.get<ApiResponse>(`${environment.apiurl}accounts/api/employee`).subscribe(data=>{
     this.employee = data
     data=data
 

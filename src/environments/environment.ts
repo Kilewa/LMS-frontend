@@ -9,7 +9,7 @@
 // };
 export const environment = {
   production: false,
-  apiUrl:'http://cavaliershrmsapi.herokuapp.com/'
+  apiurl:'http://cavaliershrmsapi.herokuapp.com/'
 };
 
 // http://127.0.0.1:8000/accounts/api/employee

@@ -32,7 +32,7 @@ export class EmployeeidComponent implements OnInit {
     
     
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee/${this.user.user.id}`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiurl}accounts/api/employee/${this.user.user.id}`).subscribe(data=>{
         this.employee = data
         data=data
         console.log(data)
@@ -44,7 +44,7 @@ export class EmployeeidComponent implements OnInit {
 
       });
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiurl}tasks/all-tasks/`).subscribe(data=>{
         this.task = data
         data=data
     
@@ -57,7 +57,7 @@ export class EmployeeidComponent implements OnInit {
     
     
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiurl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
         this.leave = data
         data=data
        
@@ -71,7 +71,7 @@ export class EmployeeidComponent implements OnInit {
       });
 
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiurl}leave/leaves/api`).subscribe(data=>{
         this.leave = data
         data=data
        
@@ -139,7 +139,7 @@ leaveApplication=()=>{
   console.log(this.applyLeave);
 
 
-  this.http.get(`${environment.apiUrl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
+  this.http.get(`${environment.apiurl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
     this.leave = data
     data=data
    
@@ -161,7 +161,7 @@ makComplete=(task)=>{
   task.employee=task.employee.user.id
   this._TaskService.makComplete(task)
 
-  this.http.get(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
+  this.http.get(`${environment.apiurl}tasks/all-tasks/`).subscribe(data=>{
     this.task = data
     data=data
 

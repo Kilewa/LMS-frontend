@@ -26,7 +26,7 @@ export class LeaveService {
 
 
    public ApplyLeave(leave) {
-    this.http.post(`${environment.apiUrl}leave/leave/api/create`, leave, this.httpOptions).subscribe(
+    this.http.post(`${environment.apiurl}leave/leave/api/create`, leave, this.httpOptions).subscribe(
       data => {
          this.notificationService.sendMessage({
             message: 'Application Successful',
@@ -55,7 +55,7 @@ export class LeaveService {
   public getEmployees() {
 
 
-    this.http.get(`${environment.apiUrl}accounts/api/employee`, this.httpOptions).subscribe(
+    this.http.get(`${environment.apiurl}accounts/api/employee`, this.httpOptions).subscribe(
       data => {
         this.getEmployee=data
         console.log(data)
@@ -68,7 +68,7 @@ export class LeaveService {
   }
 
   public approveLeave(leave) {
-    this.http.put(`${environment.apiUrl}leave/leave/api/create/${leave.id}`,leave, this.httpOptions).subscribe(
+    this.http.put(`${environment.apiurl}leave/leave/api/create/${leave.id}`,leave, this.httpOptions).subscribe(
       data => {
           this.notificationService.sendMessage({
             message: 'Leave Approved',
@@ -89,7 +89,7 @@ export class LeaveService {
 
 
   public declineLeave(leave) {
-    this.http.put(`${environment.apiUrl}leaves/leave/applications/${leave.id}`,leave, this.httpOptions).subscribe(
+    this.http.put(`${environment.apiurl}leaves/leave/applications/${leave.id}`,leave, this.httpOptions).subscribe(
       data => {
           this.notificationService.sendMessage({
             message: 'Leave Declined',

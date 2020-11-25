@@ -34,7 +34,7 @@ export class EmployeesComponent implements OnInit {
 
     
 
-    this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
+    this.http.get<ApiResponse>(`${environment.apiurl}accounts/api/employee`).subscribe(data=>{
       this.employee = data
       data=data
 

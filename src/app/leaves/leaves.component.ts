@@ -52,7 +52,7 @@ public leave:any;
    }
 
    let user = JSON.parse(localStorage.getItem('auth_user'))
-   this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
+   this.http.get<ApiResponse>(`${environment.apiurl}accounts/api/employee`).subscribe(data=>{
     this.employee = data
     data=data
     console.log(data)
@@ -65,7 +65,7 @@ public leave:any;
   });
 
   
-  this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api/employee/${user.user.id}`).subscribe(data=>{
+  this.http.get<ApiResponse>(`${environment.apiurl}leave/leaves/api/employee/${user.user.id}`).subscribe(data=>{
     this.leave = data
     data=data
     console.log(data);
