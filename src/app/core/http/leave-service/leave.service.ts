@@ -41,8 +41,13 @@ export class LeaveService {
           this.notificationService.sendMessage({
             message: 'Error making application',
             type: NotificationType.error
+
           });
+
+          console.log(err);
+         
         }
+        
     );
   }
 

@@ -6,8 +6,6 @@ import { Leave } from '../employees/leave';
 import { LeaveService } from '../core/http/leave-service/leave.service';
 import { HttpClient } from '@angular/common/http';
 import {AuthServiceService} from '../core/authentication/auth.service'
-
-
 import { environment } from '../../environments/environment';
 
 
@@ -19,9 +17,9 @@ import { environment } from '../../environments/environment';
 export class EmployeeidComponent implements OnInit {
 
   public errors: any = [];
-  public task: Task;
+  public task: any;
   public employee: any;
-  public leave: Leave;
+  public leave: any;
   public new_leave:any;
   public applyLeave:any
   public user: any;
@@ -30,9 +28,11 @@ export class EmployeeidComponent implements OnInit {
 
   ngOnInit(): void {
     this._TaskService.getEmployees()
-    let user = JSON.parse(localStorage.getItem('auth_user'))
+    this.user = JSON.parse(localStorage.getItem('auth_user'))
+    
+    
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee/${user.user.id}`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee/${this.user.user.id}`).subscribe(data=>{
         this.employee = data
         data=data
         console.log(data)
@@ -57,7 +57,21 @@ export class EmployeeidComponent implements OnInit {
     
     
 
-      this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api/employee/${user.user.id}`).subscribe(data=>{
+      this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
+        this.leave = data
+        data=data
+       
+        
+      },
+      
+      error =>{
+        this.leave = new Leave(0,"start_date","end_date", "reasons","status", "comments", 0)
+          
+
+      });
+
+
+      this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
         this.leave = data
         data=data
        
@@ -71,12 +85,12 @@ export class EmployeeidComponent implements OnInit {
       });
 
       this.applyLeave = {
+        Employee:this.user.user.id,
         start_date: '',
         end_date: '',
         reasons: '',
-        status:'',
+        status:'Pending',
         comments:'',
-        employee:''
       }
       this._leaveService.errors=[]
 
@@ -122,13 +136,46 @@ export class EmployeeidComponent implements OnInit {
 
 leaveApplication=()=>{
   this._leaveService.ApplyLeave(this.applyLeave)
+  console.log(this.applyLeave);
+
+
+  this.http.get(`${environment.apiUrl}leave/leaves/api/employee/${this.user.user.id}`).subscribe(data=>{
+    this.leave = data
+    data=data
+   
+    
+  },
+  
+  error =>{
+    this.leave = new Leave(0,"start_date","end_date", "reasons","status", "comments", 0)
+      
+
+  });
+  
 }
+
+
 
 makComplete=(task)=>{
   task.status="Complete"
   task.employee=task.employee.user.id
   this._TaskService.makComplete(task)
+
+  this.http.get(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
+    this.task = data
+    data=data
+
+  },
+  error =>{
+    this.task = new Task(0, "name", "assigned_on", "deadline", "completed", "assigned_to")
+  console.log("An error occured")
+
+});
+
 }
+
+
+
 
 
 

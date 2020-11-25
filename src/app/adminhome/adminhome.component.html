@@ -18,7 +18,7 @@
                             <a routerLink="/leaves">Manage Leave</a>
                         </li>
                         <li>
-                            <a href="#">View Departments</a>
+                            <a routerLink="/employees-tasks">View Tasks</a>
                         </li>
                         <li>
                             <a href="#">View Attendance</a>
@@ -133,11 +133,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer d-flex ">
-                                <small class="text-muted">N0. of Employees</small>
+                            <div class="card-footer d-flex">
+                                <small class="text-muted">No. of Employees</small>
                                 <small class="text-success ml-auto">
                           <!-- <i class="fa fa-caret-up" aria-hidden="true"></i> -->
-                           55
+                           {{total_staff}}
                         </small>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                             <div class="card-footer d-flex ">
                                 <small class="text-muted">Days </small>
                                 <small class="text-success ml-auto">
-                          21
+                                    {{staff_on_leave}}
                         </small>
                             </div>
                         </div>
@@ -172,15 +172,14 @@
                                         <i class="fas fa-check-double"></i>
                                     </div>
                                     <div class="ml-auto">
-                                        <p class="card-label text-right text-muted">Approved Leaves</p>
-
+                                        <p class="card-label text-right text-muted">Staff on Leave</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer d-flex ">
+                            <div *ngIf="employee" class="card-footer d-flex ">
                                 <small class="text-muted">Employees on Leave</small>
                                 <small class="text-danger ml-auto">
-                          6
+                                    {{staff_on_leave}}
                         </small>
                             </div>
                         </div>
@@ -203,12 +202,11 @@
                                 <small class="text-muted">Tasks</small>
                                 <small class="text-success ml-auto">
                             
-                          32
+                                    {{total_tasks}}
                         </small>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -233,8 +231,6 @@
                                         <td>George </td>
                                         <td>Kilewa</td>
                                         <td><i class="fas fa-check"></i></td>
-
-
                                 </tbody>
                             </table>
                         </div>

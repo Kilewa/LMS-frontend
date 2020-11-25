@@ -60,7 +60,7 @@ const routes: Routes = [
     path: 'employee-info', component: EmployeeinfoComponent
   },
   {
-    path: 'employee-tasks', component: EmployeetasksComponent
+    path: 'employees-tasks', component: EmployeetasksComponent
   },
 
   { path: 'employee-id', component: EmployeeidComponent },

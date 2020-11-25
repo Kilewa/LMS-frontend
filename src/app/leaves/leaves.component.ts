@@ -12,8 +12,8 @@ import {LeaveService} from '../../app/core/http/leave-service/leave.service';
 })
 export class LeavesComponent implements OnInit {
 
-employee:Employee;
-leave:Leave;
+public employee:Employee;
+public leave:any;
 
   constructor(public _leaveService:LeaveService,private http: HttpClient,) { }
   // constructor(private http: HttpClient,) { }
@@ -89,5 +89,7 @@ leave:Leave;
     leave.employee=leave.employee.user.id
     this._leaveService.declineLeave(leave)
   }
+
+  
 
 }

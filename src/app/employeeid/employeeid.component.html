@@ -2,7 +2,7 @@
     <!-- Sidebar Holder -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>HR Management</h3>
+            <h3>CAVALIERS HRM</h3>
         </div>
 
         <ul class="list-unstyled components">
@@ -11,16 +11,16 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="#">Update Profile</a>
+                        <a routerLink="/employee-id">Update Profile</a>
                     </li>
                     <li>
                         <a href="/leaves">View Leave Applications</a>
                     </li>
                     <li>
-                        <a href="#">View Birthdays </a>
+                        <a routerLink="/employee-id">View Birthdays </a>
                     </li>
                     <li>
-                        <a href="#">View Expenses</a>
+                        <a routerLink="/employee-id">View Expenses</a>
                     </li>
                 </ul>
             </li>
@@ -30,7 +30,7 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Expenses</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="#">Apply For Expense Reimbursement</a>
+                        <a routerLink="/employee-id">Apply For Expense Reimbursement</a>
                     </li>
                 </ul>
             </li>
@@ -40,7 +40,7 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Awards</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="#">View Awards</a>
+                        <a routerLink="/employee-id">View Awards</a>
                     </li>
 
                 </ul>
@@ -50,15 +50,11 @@
 
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Memo</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
+                   
                     <li>
-                        <a href="#">Add Memo</a>
+                        <a routerLink="/employee-id">View Memo</a>
                     </li>
-                    <li>
-                        <a href="#">View Memo</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
+                    
                 </ul>
             </li>
 
@@ -83,7 +79,7 @@
                     
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse bg-primary"  id="navbarSupportedContent">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link waves-effect waves-light">
@@ -114,30 +110,31 @@
             </div>
         </nav>
 
-        <div *ngIf="employee"  class="card-container my-20 offset-1">
+        <div *ngIf="employee"  class="text-center offset-0 pb-3 bg-light">
             <!-- Employee Profile -->
             <img class="round" src="../../assets/images/unknown.png" width="200" height="200" alt="user" />
             <h3 >{{ employee.user.first_name }} {{ employee.user.last_name }}</h3>
-            <p>{{ employee.user.email}}</p>
+            <p class="text-dark">{{ employee.user.email}}</p>
             <h6>Area of residence : {{ employee.country_of_residence }}</h6>
-            <p>Department : {{ employee.department }} <br/> Role: {{ employee.designition }}</p>
+            <p class="text-dark">Department : {{ employee.department }} <br/> Role: {{ employee.designition }}</p>
             <div class="buttons">
 
-                <button class="primary ghost" type="button" data-toggle="modal" data-target="#myModal">View Tasks</button>
+                <button class="primary bg-info text-white ghost" type="button" data-toggle="modal" data-target="#myModal">View Tasks</button>
                 <br><br>
-                <button class="primary ghost" type="button" data-toggle="modal" data-target="#leaveModal"> APPLY LEAVE </button>
-                <button class="primary ghost">ON LEAVE</button>
-                <button class="primary ghost"> AT WORK </button>
+                <button class="primary bg-primary text-white ghost mr-2" type="button" data-toggle="modal" data-target="#leaveModal"> APPLY LEAVE </button>
+                <button class="primary bg-info text-white ghost mr-2">ON LEAVE</button>
+                <button class="primary bg-primary text-white ghost mr-2"> AT WORK </button>
             </div>
-            <div  class="skills">
-                <h6 class=" ml-5">LEAVE CALENDAR</h6>
-                <ul *ngFor = "let leave of leave" class=" ml-5">
-                    <li>START DATE: {{ leave.start_date|date}}</li>
-                    <li>END DATE: {{ leave.end_date|date }}</li>
-                    <li>STATUS : {{ leave.status }}</li>
-                    <li>REASON : {{ leave.reasons }}</li>
-                </ul>
-            </div>
+            
+        </div>
+        <div  class="skills text-white">
+            <h6 class=" ml-5">LEAVE CALENDAR</h6>
+            <ul *ngFor = "let leave of leave" class=" ml-5">
+                <li>START DATE: {{ leave.start_date|date}}</li>
+                <li>END DATE: {{ leave.end_date|date }}</li>
+                <li>STATUS : {{ leave.status }}</li>
+                <li>REASON : {{ leave.reasons }}</li>
+            </ul>
         </div>
 
 
@@ -211,10 +208,7 @@
                                         <p>Reason is required</p>
                                     </div>
                                 </div>
-                                <select #status='ngModel' ng-model="status" [(ngModel)]="leave.status" name="status" id="status" class="custom-select custom-select-sm">
-                                    <option value="" selected>Pending</option>
-                                    <option *ngFor="let status of _leaveService,let i=index" value="{{status.id}}">{{status.status_name}}</option>
-                                </select>
+            
                                 <div class="form-group mt-2">
                                     <input type="text" class="form-control" #comments='ngModel' ng-model="comments" [(ngModel)]="applyLeave.comments" placeholder="Comments" required id="comments" name="comments">
                                     <div [hidden]="comments.valid || comments.pristine" class="alert alert-danger">

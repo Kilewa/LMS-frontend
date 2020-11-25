@@ -16,10 +16,16 @@ export class AdminhomeComponent implements OnInit {
   task:Task;
   employee:Employee;
   leave:Leave;
+  total_staff:any;
+  total_tasks:any;
+  staff_on_leave:any;
 
   constructor(private http: HttpClient,public _authService:AuthServiceService) { }
 
   ngOnInit(): void {
+
+    let user = JSON.parse(localStorage.getItem('auth_user'))
+
     interface ApiResponse{
       id: number, 
       name: string, 
@@ -59,7 +65,9 @@ export class AdminhomeComponent implements OnInit {
   this.http.get<ApiResponse>(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
     this.task = data
     data=data
-    console.log(data)
+    this.total_tasks=Object.keys(data).length
+    console.log(Object.keys(data).length)
+   
   },
   error =>{
     this.task = new Task(0, "name", "assigned_on", "deadline", "completed", "assigned_to")
@@ -70,25 +78,38 @@ export class AdminhomeComponent implements OnInit {
 
 this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
   this.employee = data
-  data=data
-  console.log(data)
+  this.total_staff=Object.keys(data).length
+  console.log(Object.keys(data).length)
 },
  
 error =>{
   this.employee = new Employee("","first_name", "last_name", 0, 0, "gender", "designition", "department", "city", "county", "nationality", "country", "address", 0)
-console.log("An error occured")
+console.log(error)
 
 });
 
-this.http.get<ApiResponse>(`${environment.apiUrl}leaves/leave/applications/`).subscribe(data=>{
+this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
   this.leave = data
   data=data
-  console.log(data)
+  this.staff_on_leave=Object.keys(data).length
+  console.log(Object.keys(data).length)
 },
  
 error =>{
   this.leave = new Leave(0, "start_date","end_date", "reasons","status", "comments", 0)
-console.log("An error occured")
+console.log(error)
+
+});
+this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
+  this.leave = data
+  data=data
+  this.staff_on_leave=Object.keys(data).length
+  console.log(Object.keys(data).length)
+},
+ 
+error =>{
+  this.leave = new Leave(0, "start_date","end_date", "reasons","status", "comments", 0)
+console.log(error)
 
 });
 
