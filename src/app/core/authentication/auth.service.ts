@@ -53,7 +53,7 @@ export class AuthServiceService {
   }
 
   public logindepthead(user) {
-    this.http.post(`${environment.apiUrl}accounts/api/login`, JSON.stringify(user), this.httpOptions).subscribe(
+    this.http.post(`${environment.apiurl}accounts/api/login`, JSON.stringify(user), this.httpOptions).subscribe(
       (data:any)  => {
         this.updateData(data['access'],data['authenticatedUser'])
         this.refresh=data['refresh']
@@ -71,7 +71,7 @@ export class AuthServiceService {
 
 
   public registerUser(user) {
-    this.http.post(`${environment.apiUrl}accounts/api/register`, JSON.stringify(user), this.httpOptions).subscribe(
+    this.http.post(`${environment.apiurl}accounts/api/register`, JSON.stringify(user), this.httpOptions).subscribe(
       (data:any) => {
       	  this.notificationService.sendMessage({
             message: data.message,
@@ -113,7 +113,7 @@ export class AuthServiceService {
 
     
     if(parseInt(user.role)===2){
-      this.http.get(`${environment.apiUrl}accounts/api/departmenthead/${token_decoded.user_id}`, this.httpOptions).subscribe(
+      this.http.get(`${environment.apiurl}accounts/api/departmenthead/${token_decoded.user_id}`, this.httpOptions).subscribe(
       data => {
         localStorage.setItem('auth_user',JSON.stringify(data))
         this.router.navigate(['admin'])
@@ -124,7 +124,7 @@ export class AuthServiceService {
       )
 
     }else if(parseInt(user.role)===3){
-      this.http.get(`${environment.apiUrl}accounts/api/employee/${token_decoded.user_id}`, this.httpOptions).subscribe(
+      this.http.get(`${environment.apiurl}accounts/api/employee/${token_decoded.user_id}`, this.httpOptions).subscribe(
       data => {
         localStorage.setItem('auth_user',JSON.stringify(data))
         this.router.navigate(['employee-id'])
