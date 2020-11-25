@@ -3,12 +3,12 @@
 .auth{
     background-color: #002855;
     color: #fff;
-    height: 80vh;
+    height: 90vh;
     font-family: 'Miriam Libre', sans-serif;
    
 }
 .form-signin{
-    top: 20%;
+    top: 10%;
     width: 28%;
     left: 35%;
     position: absolute;

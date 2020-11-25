@@ -4,6 +4,7 @@ import { Employee } from '../employees/employee';
 import { Leave } from '../employees/leave';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import {AuthServiceService} from '../core/authentication/auth.service';
 
 @Component({
   selector: 'app-adminhome',
@@ -16,7 +17,7 @@ export class AdminhomeComponent implements OnInit {
   employee:Employee;
   leave:Leave;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,public _authService:AuthServiceService) { }
 
   ngOnInit(): void {
     interface ApiResponse{

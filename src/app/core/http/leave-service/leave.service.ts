@@ -13,7 +13,7 @@ export class LeaveService {
   private httpOptions: any;
   leave: any
   getEmployee: any
-  errors:boolean=false
+  errors:any
 
   
 
@@ -26,17 +26,19 @@ export class LeaveService {
 
 
    public ApplyLeave(leave) {
-    this.http.post(`${environment.apiUrl}leaves/apply-leave/`, leave, this.httpOptions).subscribe(
+    this.http.post(`${environment.apiUrl}leave/leave/api/create`, leave, this.httpOptions).subscribe(
       data => {
          this.notificationService.sendMessage({
             message: 'Application Successful',
             type: NotificationType.success
           });
+          console.log(data);
+          
       },
       err => {
     
         this.appErrors=[err.error]
-         this.notificationService.sendMessage({
+          this.notificationService.sendMessage({
             message: 'Error making application',
             type: NotificationType.error
           });
@@ -46,9 +48,9 @@ export class LeaveService {
 
 
   public getEmployees() {
-    let user = JSON.parse(localStorage.getItem('auth_user'))
 
-    this.http.get(`${environment.apiUrl}accounts/api/employee/${user.user.id}`, this.httpOptions).subscribe(
+
+    this.http.get(`${environment.apiUrl}accounts/api/employee`, this.httpOptions).subscribe(
       data => {
         this.getEmployee=data
         console.log(data)
@@ -61,7 +63,7 @@ export class LeaveService {
   }
 
   public approveLeave(leave) {
-    this.http.put(`${environment.apiUrl}leaves/leave/applications/${leave.id}`,leave, this.httpOptions).subscribe(
+    this.http.put(`${environment.apiUrl}leave/leave/api/create/${leave.id}`,leave, this.httpOptions).subscribe(
       data => {
           this.notificationService.sendMessage({
             message: 'Leave Approved',
@@ -99,5 +101,7 @@ export class LeaveService {
        }
     );
   }
+
+
 }
 

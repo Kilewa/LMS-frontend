@@ -149,11 +149,11 @@ export class AuthServiceService {
 
     if(user.user.role===2){
       localStorage.clear();
-      this.router.navigate(['/departmenthead/login'])
+      this.router.navigate(['/'])
     }
     else if(user.user.role===3){
       localStorage.clear();
-      this.router.navigate(['/employee/login'])
+      this.router.navigate(['/'])
     }else{
       localStorage.clear();
       this.router.navigate(['/'])

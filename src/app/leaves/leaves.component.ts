@@ -51,11 +51,11 @@ leave:Leave;
       employee: number
    }
 
-
+   let user = JSON.parse(localStorage.getItem('auth_user'))
    this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
     this.employee = data
     data=data
-    // console.log(data)
+    console.log(data)
   },
    
   error =>{
@@ -64,29 +64,30 @@ leave:Leave;
   
   });
 
-
-   this.http.get<ApiResponse>(`${environment.apiUrl}leaves/leave/applications/`).subscribe(data=>{
+  
+  this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api/employee/${user.user.id}`).subscribe(data=>{
     this.leave = data
     data=data
-    // console.log(data)
+    console.log(data);
+    
   },
    
   error =>{
     this.leave = new Leave(0, "start_date","end_date", "reasons","status", "comments", 0)
-  console.log("An error occured")
+  console.log(error)
   
   });
   
   }
-  // approveLeave=(leave)=>{
-  //   leave.status="Approved"
-  //   leave.employee=leave.employee.id
-  //   this._leaveService.approveLeave(leave)
-  // }
-  // declineLeave=(leave)=>{
-  //   leave.status="Declined"
-  //   leave.employee=leave.employee.id
-  //   this._leaveService.declineLeave(leave)
-  // }
+  approveLeave=(leave)=>{
+    leave.status="Approved"
+    leave.employee=leave.employee.user.id
+    this._leaveService.approveLeave(leave)
+  }
+  declineLeave=(leave)=>{
+    leave.status="Denied"
+    leave.employee=leave.employee.user.id
+    this._leaveService.declineLeave(leave)
+  }
 
 }

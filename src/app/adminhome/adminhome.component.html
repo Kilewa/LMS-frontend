@@ -3,11 +3,11 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>HR Management</h3>
+                <h3>Cavaliers HRM </h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+                <img src="../../assets/images/UC Logo.png" width="50" height="50" alt="">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -15,7 +15,7 @@
                             <a routerLink="/employees">Manage Employees</a>
                         </li>
                         <li>
-                            <a href="#">Manage Leave</a>
+                            <a routerLink="/leaves">Manage Leave</a>
                         </li>
                         <li>
                             <a href="#">View Departments</a>
@@ -58,7 +58,7 @@
                             <a href="#">View Memo</a>
                         </li>
                         <li>
-                            <a href="#">Page 3</a>
+                            <a href="#">View tasks</a>
                         </li>
                     </ul>
                 </li>
@@ -103,7 +103,11 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link p-0" href="#">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                                    <img src="../../assets/images/unknown.png" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                                </a>
+                            </li>
+                            <li class="nav-item p-link">
+                                <a (click)='this._authService.logOut();' class="nav-link" href="">Logout
                                 </a>
                             </li>
                         </ul>
@@ -133,7 +137,7 @@
                                 <small class="text-muted">N0. of Employees</small>
                                 <small class="text-success ml-auto">
                           <!-- <i class="fa fa-caret-up" aria-hidden="true"></i> -->
-                           5,35
+                           55
                         </small>
                             </div>
                         </div>
@@ -154,7 +158,7 @@
                             <div class="card-footer d-flex ">
                                 <small class="text-muted">Days </small>
                                 <small class="text-success ml-auto">
-                          8,66%
+                          21
                         </small>
                             </div>
                         </div>
@@ -174,9 +178,9 @@
                                 </div>
                             </div>
                             <div class="card-footer d-flex ">
-                                <small class="text-muted">App No of Leaves</small>
+                                <small class="text-muted">Employees on Leave</small>
                                 <small class="text-danger ml-auto">
-                          2,81%
+                          6
                         </small>
                             </div>
                         </div>
@@ -199,7 +203,7 @@
                                 <small class="text-muted">Tasks</small>
                                 <small class="text-success ml-auto">
                             
-                          174%
+                          32
                         </small>
                             </div>
                         </div>
@@ -219,15 +223,15 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
+                                        <td>George </td>
+                                        <td>Kilewa</td>
                                         <td><i class="fas fa-check"></i></td>
 
 
@@ -246,16 +250,16 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Transport</th>
+                                        <th scope="col">Fuel</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
+                                        <td>2000</td>
+                                        <td>5000</td>
                                         <td><i class="fas fa-check"></i></td>
                                 </tbody>
                             </table>
@@ -276,15 +280,15 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
+                                        <th scope="col">First name</th>
+                                        <th scope="col">Last Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
+                                        <td>Valentine</td>
+                                        <td>Robai</td>
                                         <td><i class="fas fa-check"></i></td>
 
 
@@ -303,16 +307,16 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
+                                        <th scope="col">Employee of the month</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Second Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
+                                        <td>Dancan</td>
+                                        <td>Oruko</td>
                                         <td><i class="fas fa-check"></i></td>
                                 </tbody>
                             </table>
