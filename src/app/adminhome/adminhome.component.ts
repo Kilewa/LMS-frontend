@@ -62,7 +62,7 @@ export class AdminhomeComponent implements OnInit {
     employee: number
  }
 
-  this.http.get<ApiResponse>(`${environment.apiUrl}tasks/all-tasks/`).subscribe(data=>{
+  this.http.get<ApiResponse>(`${environment.apiurl}tasks/all-tasks/`).subscribe(data=>{
     this.task = data
     data=data
     this.total_tasks=Object.keys(data).length
@@ -76,7 +76,7 @@ export class AdminhomeComponent implements OnInit {
 });
 
 
-this.http.get<ApiResponse>(`${environment.apiUrl}accounts/api/employee`).subscribe(data=>{
+this.http.get<ApiResponse>(`${environment.apiurl}accounts/api/employee`).subscribe(data=>{
   this.employee = data
   this.total_staff=Object.keys(data).length
   console.log(Object.keys(data).length)
@@ -88,7 +88,7 @@ console.log(error)
 
 });
 
-this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
+this.http.get<ApiResponse>(`${environment.apiurl}leave/leaves/api`).subscribe(data=>{
   this.leave = data
   data=data
   this.staff_on_leave=Object.keys(data).length
@@ -100,7 +100,7 @@ error =>{
 console.log(error)
 
 });
-this.http.get<ApiResponse>(`${environment.apiUrl}leave/leaves/api`).subscribe(data=>{
+this.http.get<ApiResponse>(`${environment.apiurl}leave/leaves/api`).subscribe(data=>{
   this.leave = data
   data=data
   this.staff_on_leave=Object.keys(data).length
