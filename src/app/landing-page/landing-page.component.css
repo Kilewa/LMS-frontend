@@ -5,7 +5,7 @@ body{
   overflow-x: hidden;
 }
 .landingpage {
-  background-image: url("/assets/images/LDP.jpg");
+  background-image: url("../../assets/images/LDP.jpg");
   background-color: rgba(10, 0, 53);
   height: 76vh;
   background-position: center;
