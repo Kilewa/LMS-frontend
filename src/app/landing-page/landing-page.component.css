@@ -5,7 +5,7 @@ body{
   overflow-x: hidden;
 }
 .landingpage {
-  background-image: url("https://github.com/Kilewa/LMS-frontend/blob/main/src/assets/images/LDP.jpg");
+  background-image: url("./assets/LDP.jpg");
   background-color: rgba(10, 0, 53);
   height: 76vh;
   background-position: center;
